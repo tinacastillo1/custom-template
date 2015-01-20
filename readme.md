@@ -4,7 +4,7 @@ This is a custom front-end template for developing websites.
 
 Styling
 ==
-//add all style files
+Add all style files
 **Sass files:**
 
 - `basic-content.scss` = all content area styles (may not include specific site area styles)
@@ -17,12 +17,12 @@ Styling
 - `print.scss` = print styles
 
 **fonts:**
-//add all fonts
+Add all fonts
 - FontAwesome icons
 
 Code
 ==
-//add all javascript libraries
+Add all javascript libraries
 **js:**
 
 - `modernizr.js` - http://modernizr.com/
@@ -45,6 +45,7 @@ Front-End Dev
 - Download Node.js: http://nodejs.org/download/
 - Install Node.js globally = 'npm install node'
 - Install Gulp globally = 'npm install -g gulp'
+
 **Follow these steps if node and gulp are already installed globally on your machine**
 - Go to the project directory and install the project dependencies on your machine = 'npm install'
 - Run the 'gulp' command within the project to begin automation
@@ -54,4 +55,4 @@ Front-End Dev
 
 MISC
 ==
-//add additional comments here
+Add additional comments here
