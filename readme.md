@@ -5,6 +5,7 @@ This is a custom front-end template for developing websites.
 Styling
 ==
 Add all style files
+
 **Sass files:**
 
 - `basic-content.scss` = all content area styles (may not include specific site area styles)
@@ -23,6 +24,7 @@ Add all fonts
 Code
 ==
 Add all javascript libraries
+
 **js:**
 
 - `modernizr.js` - http://modernizr.com/
