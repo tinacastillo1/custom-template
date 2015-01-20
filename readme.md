@@ -1,11 +1,10 @@
-[Project Name]
+About this template
 ==
-This document was created by Tina Castillo
-
-*Last updated: [date]*
+This is a custom front-end template for developing websites.
 
 Styling
 ==
+//add all style files
 **Sass files:**
 
 - `basic-content.scss` = all content area styles (may not include specific site area styles)
@@ -18,11 +17,12 @@ Styling
 - `print.scss` = print styles
 
 **fonts:**
-
+//add all fonts
 - FontAwesome icons
 
 Code
 ==
+//add all javascript libraries
 **js:**
 
 - `modernizr.js` - http://modernizr.com/
@@ -51,3 +51,7 @@ Front-End Dev
 - *For more information: http://gulpjs.com/*
 - *To remove a plugin: delete the task from the gulpfile.js and run 'npm remove pluginname'
 - *To add a plugin: run 'npm install --save-dev pluginname'
+
+MISC
+==
+//add additional comments here
