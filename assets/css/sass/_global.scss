@@ -1,0 +1,165 @@
+/*Global Styles*/
+*,
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+
+html{
+	font-size: 1em;
+	line-height: 1.5em;
+	-ms-text-size-adjust: 100%;
+  	-webkit-text-size-adjust: 100%;
+}
+body{
+	@include clearfix;
+	text-rendering: optimizeLegibility;
+	color:$text;
+	font-family:sans-serif;
+	height: 100%;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #dddddd;
+    margin: .5em 0 .25em 0;
+    padding: 0 0 .25em 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+form{
+
+}
+
+textarea {
+    resize: vertical;
+}
+
+a{
+	color:$text-link;
+	text-decoration: none;
+	&:hover{
+		text-decoration:underline;
+	}
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+ul, ol{
+	padding: 0 0 1.250em 1.250em;
+	margin:0;
+	list-style: bullets;
+}
+
+h1, h2, h3, h4, h5, h6{
+	padding: 1.250em 0 .625em 0;
+	margin: 0;
+	font-family: $heading;
+	font-weight: normal;
+	letter-spacing: .5px;
+	color: $heading;
+}
+h1{
+	font-size: 2.25em;
+}
+h2{
+	font-size: 2em;
+}	
+h3{
+	font-size: 1.75em;
+}
+h4{
+	font-size: 1.5em;
+}
+h5{
+	font-size: 1.25em;
+}
+h6{
+	font-size: 1.15em;
+}
+
+p{
+	padding: 0 0 1.250em 0;
+	margin: 0;
+}
+
+img { max-width: 100%;}
+
+
+//
+// Miscellaneous Styles
+//
+
+
+// Buttons
+.input, button{
+
+	&:hover, &:active{
+
+	}
+}
+
+.col-3{
+	width:23%;
+	margin: 0 1%;
+	float:left;
+}
+.col-2{
+	width:48%;
+	margin: 0 1%;
+	float:left;
+}
+
+.clearfix{
+	@include clearfix;
+}
+
+//font awesome icons
+.fa-question-circle:before {content: "\f059"; }
+.fa-times-circle:before {content: "\f057"; }
+.fa-twitter-square:before {content: "\f081"; }
+.fa-facebook-square:before {content: "\f082"; }
+.fa-fa-check-square-o:before {content: "\f046"; }
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+.remove-block{
+	@include inline-block;
+}

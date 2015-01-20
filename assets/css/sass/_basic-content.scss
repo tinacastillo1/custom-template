@@ -1,0 +1,33 @@
+/*Main content area*/
+
+.main-container{
+	@include full-width;
+
+	.content{
+		width: 100%;
+		@include clearfix;
+
+		&.sidebar{
+			@include breakpoint($medium){
+				width: 65%;
+				float: left;
+				margin-right: 5%;
+			}
+		}
+	}
+
+	aside{
+		width: 100%;
+
+		@include breakpoint($medium){
+			width: 30%;
+			float: left;
+		}
+
+		.sidebar-block{
+			@include clearfix;
+			padding: 1.250em;
+			margin: 0 0 1.250em 0;
+		}
+	}
+}

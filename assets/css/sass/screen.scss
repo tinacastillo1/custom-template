@@ -1,0 +1,33 @@
+/* screen.scss */
+
+/*Typography Colors*/
+$text: #000;
+$text-link: #000;
+$text-link-hover: #000;
+$nav: #000;
+$nav-link: #000;
+$nav-link-hover: #000;
+$heading: #000;
+
+/*Brand Colors*/
+
+
+/*Breakpoints*/
+$breakpoint-no-queries: false;
+$breakpoint-no-query-fallbacks: true;
+$really-small: 30em; /*a min-width of 480px*/
+$small: 37.5em; /*a min-width of 600px*/
+$medium: 50em; /*a min-width of 800px*/
+$large: 56.250em; /*a min-width of 900px */
+$huge: 60em; /*a min-width of 960px*/
+$really-huge: 71.875em; /*a min-width of 1150px*/
+
+@import "normalize";
+@import "compass";
+@import "breakpoint";
+@import "mixins";
+@import "global";
+@import "header";
+@import "basic-content";
+@import "footer";
+@import "ie";

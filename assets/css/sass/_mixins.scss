@@ -1,0 +1,29 @@
+/* sets site up for using rem's (ems relevant to the root) 
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}*/
+
+@mixin clearfix {
+	&:after, &:before {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	& {
+		*zoom: 1;
+	}
+}
+
+@mixin full-width{
+	width: 100%;
+	margin: 0 auto;
+}
+
+@mixin maxwidth{
+	margin:0 auto;
+	max-width:1200px;
+	@include clearfix;
+}
