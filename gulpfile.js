@@ -24,7 +24,7 @@ var gulp = require('gulp'),
 // JS debugging and hinting for the main javascript file (if you run it with plugins there are usually too many errors)
 // jshint, stripDebug
 gulp.task('cleanJS', function() {
-    return gulp.src('assets/js/main.js')
+    return gulp.src('assets-src/js/main.js')
         .pipe(jshint())
 	 	.pipe(jshint.reporter('default'))
         .pipe(stripDebug())
@@ -34,21 +34,21 @@ gulp.task('cleanJS', function() {
 // JS concatenation and minifying task
 // concat and uglify
 gulp.task('scripts', function() {
-    return gulp.src(['assets/js/plugins.js','assets/js/*.js'])
+    return gulp.src(['assets-src/js/plugins.js','assets-src/js/*.js'])
         .pipe(uglify())
         .pipe(concat('custom.min.js'))
-        .pipe(gulp.dest('minify-assets/js'))
+        .pipe(gulp.dest('assets-minify/js'))
         .pipe(notify({ message: 'Scripts task complete - js files minified to minify-assets folder' }))
 });
 
 // Compass task
 // compass, notify
 gulp.task('compass', function() {
-	return gulp.src('assets/css/sass/*.scss')
+	return gulp.src('assets-src/css/sass/*.scss')
 		.pipe(compass({
-			config_file: 'assets/css/config.rb',
-			css: 'minify-assets/css',
-			sass: 'assets/css/sass'
+			config_file: 'assets-src/css/config.rb',
+			css: 'assets-minify/css',
+			sass: 'assets-src/css/sass'
 		}))
 		.pipe(notify({
 			message: 'Compass task complete - sass files have been compiled to minify-assets folder'
@@ -59,9 +59,9 @@ gulp.task('compass', function() {
 // Minify Images task
 // imagemin, changed
 gulp.task('images', function() {
-	var dest = 'assets/img/';
+	var dest = 'assets-src/img/';
 
-	return gulp.src('assets/img/**')
+	return gulp.src('assets-src/img/**')
 		.pipe(changed(dest)) // Ignore unchanged files
 		.pipe(imagemin()) // Optimize
 		.pipe(gulp.dest(dest))
@@ -78,26 +78,29 @@ gulp.task('build', ['cleanJS', 'scripts', 'compass']);
 // browsersync + watch for new files
 gulp.task('browser-sync', function() {
 	var watchFiles = [
-		'*.php',
-		'assets/css/sass/*.scss',
-		'assets/js/*.js',
-		'assets/img/**',
+		'*.html',
+		'assets-src/css/sass/*.scss',
+		'assets-src/js/*.js',
+		'assets-src/img/**',
 	];
 
     browserSync({
 		files: watchFiles,
 		//change depending on what port you're working on locally or use localhost
-		proxy: "http://10.0.10.54:8011"
+		//proxy: "http://10.0.10.54:8011"
+		server: {
+            baseDir: "./"
+        }
 	});
 });
 
 // Watch Task
 // watch js, compass, images, and run browsersync
 gulp.task('watch', ['build','browser-sync'], function(){
-	gulp.watch('assets/js/*.js', ['scripts']);
-	gulp.watch('assets/css/sass/*.scss', ['compass']);
-	gulp.watch('assets/img/**', ['images']);
-	gulp.watch('*.php');
+	gulp.watch('assets-src/js/*.js', ['scripts']);
+	gulp.watch('assets-src/css/sass/*.scss', ['compass']);
+	gulp.watch('assets-src/img/**', ['images']);
+	gulp.watch('*.html');
 });
 
 gulp.task('default', ['watch']);
