@@ -29,9 +29,12 @@ Add all javascript libraries
 
 - `modernizr.js` - http://modernizr.com/
 - 'main.js' - custom scripts
-- 'plugins.js' - list all plugins and link to them here
-- 'custom.min.js' - (minified plugins.js and main.js files)
+- 'custom.min.js' - (minified main.js files)
+- 'vendor.min.js' - (minified *.js files in the vendor folder)
 - 'breakpoint.js' - http://xoxco.com/projects/code/breakpoints/
+
+**Compile main.js manually into the assets-min > js folder as custom.min.js**
+**Compile *.js in the vendors folder manually into the assets-min > js folder as vendor.min.js**
 
 Front-End Dev
 ==
@@ -40,20 +43,6 @@ Front-End Dev
 - Install Bundler = 'gem install bundler'
 - Install dependencies = 'bundle install'
 - *For more information: http://bundler.io/*
-
-**Use the gulpfile to automate you system:**
-
-**Start following these steps here if you do not have node or gulp globally installed on your machine (you may need to use sudo)**
-- Download Node.js: http://nodejs.org/download/
-- Install Node.js globally = 'npm install node'
-- Install Gulp globally = 'npm install -g gulp'
-
-**Follow these steps if node and gulp are already installed globally on your machine**
-- Go to the project directory and install the project dependencies on your machine = 'npm install'
-- Run the 'gulp' command within the project to begin automation
-- *For more information: http://gulpjs.com/*
-- *To remove a plugin: delete the task from the gulpfile.js and run 'npm remove pluginname'
-- *To add a plugin: run 'npm install --save-dev pluginname'
 
 MISC
 ==
