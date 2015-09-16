@@ -41,14 +41,13 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header role="banner"> 
-            <nav role="navigation"></nav>
+        <header> 
+            <nav></nav>
             <!-- use if applicable -->
             <!-- <form role="search"> </form> -->
         </header>
 
-        <main role="main">
+        <main>
             <!-- use if applicable -->
             <!-- <article role="article"></article>
             <aside role="complementary"></aside> -->
-        </main>

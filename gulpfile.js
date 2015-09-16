@@ -34,7 +34,7 @@ gulp.task('cleanJS', function() {
 // JS concatenation and minifying task
 // concat and uglify
 gulp.task('scripts', function() {
-    return gulp.src(['assets-src/js/plugins.js','assets-src/js/*.js'])
+    return gulp.src(['assets-src/js/main.js','assets-src/js/vendor/*.js'])
         .pipe(uglify())
         .pipe(concat('custom.min.js'))
         .pipe(gulp.dest('assets-minify/js'))
@@ -44,11 +44,11 @@ gulp.task('scripts', function() {
 // Compass task
 // compass, notify
 gulp.task('compass', function() {
-	return gulp.src('assets-src/css/sass/*.scss')
+	return gulp.src('assets-src/compass/sass/*.scss')
 		.pipe(compass({
-			config_file: 'assets-src/css/config.rb',
+			config_file: 'assets-src/compass/config.rb',
 			css: 'assets-minify/css',
-			sass: 'assets-src/css/sass'
+			sass: 'assets-src/compass/sass'
 		}))
 		.pipe(notify({
 			message: 'Compass task complete - sass files have been compiled to minify-assets folder'
@@ -59,9 +59,9 @@ gulp.task('compass', function() {
 // Minify Images task
 // imagemin, changed
 gulp.task('images', function() {
-	var dest = 'assets-src/img/';
+	var dest = 'assets-minify/img/';
 
-	return gulp.src('assets-src/img/**')
+	return gulp.src('assets-minify/img/**')
 		.pipe(changed(dest)) // Ignore unchanged files
 		.pipe(imagemin()) // Optimize
 		.pipe(gulp.dest(dest))
@@ -79,9 +79,9 @@ gulp.task('build', ['cleanJS', 'scripts', 'compass']);
 gulp.task('browser-sync', function() {
 	var watchFiles = [
 		'*.html',
-		'assets-src/css/sass/*.scss',
+		'assets-src/compass/sass/*.scss',
 		'assets-src/js/*.js',
-		'assets-src/img/**',
+		'assets-minify/img/**',
 	];
 
     browserSync({
@@ -98,8 +98,8 @@ gulp.task('browser-sync', function() {
 // watch js, compass, images, and run browsersync
 gulp.task('watch', ['build','browser-sync'], function(){
 	gulp.watch('assets-src/js/*.js', ['scripts']);
-	gulp.watch('assets-src/css/sass/*.scss', ['compass']);
-	gulp.watch('assets-src/img/**', ['images']);
+	gulp.watch('assets-src/compass/sass/*.scss', ['compass']);
+	gulp.watch('assets-minify/img/**', ['images']);
 	gulp.watch('*.html');
 });
 
