@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>AI DEMO WORKFLOW</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="follow, all" />
@@ -37,17 +37,17 @@
         <script src="/assets-minify/js/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+        <!-- ADD GTM HERE -->
+
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header> 
+        <header>
+            <a href="/"><img src="/assets-minify/img/sba-logo.png" alt="SBA logo" title="Back to homepage"></a>
             <nav></nav>
             <!-- use if applicable -->
             <!-- <form role="search"> </form> -->
         </header>
 
         <main>
-            <!-- use if applicable -->
-            <!-- <article role="article"></article>
-            <aside role="complementary"></aside> -->

@@ -1,33 +1,82 @@
 /*Main content area*/
 
-.main-container{
+main{
 	@include full-width;
+	@include clearfix;
+	padding: 5.5em 0 0 0;
 
-	.content{
-		width: 100%;
-		@include clearfix;
-
-		&.sidebar{
-			@include breakpoint($medium){
-				width: 65%;
-				float: left;
-				margin-right: 5%;
-			}
-		}
+	@include breakpoint($medium){
+		padding: 3em 0 0 0;
 	}
 
-	aside{
-		width: 100%;
+	.content{
+		@include maxwidth;
+	}
+}
 
-		@include breakpoint($medium){
-			width: 30%;
-			float: left;
-		}
+.wrapper{
+	@include maxwidth;
 
-		.sidebar-block{
-			@include clearfix;
-			padding: 1.250em;
-			margin: 0 0 1.250em 0;
-		}
+	//limit the copy width for readability
+	.content &{
+		max-width: 800px;
+		margin: auto;
+	}
+	.intro &{
+		max-width: 800px;
+		margin: auto;
+	}
+}
+
+section{
+	@include clearfix;
+	padding-top: 2em;
+	padding-bottom:2em;
+
+	&.small-padding{
+		padding-top: 0.5em;
+		padding-bottom:0.5em;
+	}
+
+	&.big-padding{
+		padding-top: 3em;
+		padding-bottom:3em;
+	}
+
+	&.no-padding{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&.padding-bottom{
+		padding-top: 0;
+		padding-bottom: 2em;
+	}
+
+	&.no-padding-bottom{
+		padding-bottom: 0;
+	}
+
+	&:last-child{padding-bottom: 0;}
+
+	&.content{padding-bottom: 4em;}
+}
+
+//Columns
+.columns{
+	@include clearfix;
+	padding: 1em;
+	margin-bottom: 1em;
+	background-color: darken(#343434, 4%);
+}
+.column-2{
+	float: none;
+	width: 100%;
+	margin: 0 0 1em 0;
+
+	@include breakpoint($medium){
+		float: left;
+		width: 48%;
+		margin: 0 1% 1em 1%;
 	}
 }

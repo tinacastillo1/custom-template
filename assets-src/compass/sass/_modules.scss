@@ -1,0 +1,21 @@
+//Module Specific Styles
+
+.blue{
+	color: #78b5e8;
+}
+.pink{
+	color: #ed7bb4;
+}
+.purple{
+	color: #a97ddb;
+}
+.red{
+	color: #e04348;
+}
+
+details{
+	&:hover{
+		cursor:pointer;
+		opacity: .8;
+	}
+}
