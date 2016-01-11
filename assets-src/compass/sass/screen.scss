@@ -1,13 +1,14 @@
 /* screen.scss */
 
 /*Typography Colors*/
-$text: #000;
-$text-link: #000;
-$text-link-hover: #000;
+$text: #efefef;
+$text-link: darken(#efefef, 10%);
+/*$text-link-hover: darken(#F01C24, 10%);*/
+$text-link-hover: darken(#efefef, 40%);
 $nav: #000;
 $nav-link: #000;
 $nav-link-hover: #000;
-$heading: #000;
+$heading: lighten(#6d6a6a, 18%);
 
 /*Brand Colors*/
 
@@ -30,4 +31,6 @@ $really-huge: 71.875em; /*a min-width of 1150px*/
 @import "header";
 @import "basic-content";
 @import "footer";
+@import "forms";
+@import "modules";
 @import "ie";
