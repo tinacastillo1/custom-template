@@ -34,12 +34,14 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="/assets-minify/js/modernizr-2.8.3.min.js"></script>
+        <script src="/assets-minify/js/modernizr-custom.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <!-- Add GTM tag here -->
 
         <header> 
             <nav></nav>
@@ -48,6 +50,3 @@
         </header>
 
         <main>
-            <!-- use if applicable -->
-            <!-- <article role="article"></article>
-            <aside role="complementary"></aside> -->
